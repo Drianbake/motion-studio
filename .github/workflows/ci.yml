@@ -1,0 +1,43 @@
+# .github/workflows/ci.yml
+
+name: Continuous Integration
+
+# This workflow runs on pushes and pull requests targeting the 'develop' branch
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+
+jobs:
+  build-and-test:
+    # Use the latest version of Ubuntu for our runner
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use the LTS version
+          cache: 'npm'
+
+      # Step 3: Install dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # Step 4: Run Linter (We will add this command later)
+      # - name: Lint Code
+      #   run: npm run lint
+
+      # Step 5: Run Tests (We will add this command later)
+      # - name: Run Tests
+      #   run: npm run test --if-present
+
+      # Step 6: Build Project
+      - name: Build Project
+        run: npm run build

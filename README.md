@@ -40,7 +40,7 @@ Instructions on setting up this project locally.
 
 1.  Clone the repository:
     ```sh
-    git clone [https://github.com/YourUsername/motion-studio.git](https://github.com/YourUsername/motion-studio.git)
+    git clone [https://github.com/Drianbake/motion-studio.git](https://github.com/YourUsername/motion-studio.git)
     ```
 2.  Navigate to the project directory:
     ```sh
