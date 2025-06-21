@@ -12,10 +12,10 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+      "npx eslint --fix",
+      "npx prettier --write"
     ],
-    "*.{css,md,json}": "prettier --write"
+    "*.{css,md,json}": "npx prettier --write"
   },
   "dependencies": {
     "react": "^19.1.0",

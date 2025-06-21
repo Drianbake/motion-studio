@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+# Motion Studio 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Motion Studio Banner](https://placehold.co/1200x400/1a1a1a/ffffff?text=Motion%20Studio)
 
-Currently, two official plugins are available:
+> A web-based, real-time motion capture tool for 3D character animation using just a webcam. Built with React, Three.js, and MediaPipe.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](.github/PULL_REQUEST_TEMPLATE.md)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Real-time Motion Capture:** Animate 3D models live using your webcam.
+- **Video File Processing:** Upload pre-recorded videos to generate animations.
+- **Custom Model Support:** Import your own rigged 3D characters in `.glb` and `.gltf` formats.
+- **Blender Integration:** Export animation data as a Python script for easy use in Blender.
+- **Animation Enhancement:** Tools for smoothing and refining captured motion.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Frontend:** React, TypeScript, Vite
+- **3D Rendering:** Three.js, React Three Fiber
+- **Computer Vision:** Google's MediaPipe
+- **State Management:** Zustand
+- **Styling:** CSS Modules / Styled-Components (TBD)
+- **Code Quality:** ESLint, Prettier
+- **Version Control:** Git & GitHub
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🚀 Getting Started
+
+Instructions on setting up this project locally.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS version)
+- [Git](https://git-scm.com/)
+
+### Installation
+
+1.  Clone the repository:
+    ```sh
+    git clone [https://github.com/YourUsername/motion-studio.git](https://github.com/YourUsername/motion-studio.git)
+    ```
+2.  Navigate to the project directory:
+    ```sh
+    cd motion-studio
+    ```
+3.  Install NPM packages:
+    ```sh
+    npm install
+    ```
+4.  Start the development server:
+    ```sh
+    npm run dev
+    ```
+5.  Open your browser and navigate to the HTTPS URL provided (e.g., `https://localhost:5173/`).
+
+## usage Usage
+
+1.  **Import a Model:** Click "Import Model" and select a rigged `.glb` or `.gltf` character.
+2.  **Select Input:** Choose between "Live Webcam" or "Upload Video".
+3.  **Capture Motion:** Click "Start Capture" to begin the animation process.
+4.  **Export:** Once complete, stop the capture and export the animation as a Blender script.
+
+## 🗺️ Roadmap
+
+See the [open issues](https://github.com/Drianbake/motion-studio/issues) for a list of proposed features and known issues.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Drianbake/motion-studio/issues). Please read our [contributing guidelines](CONTRIBUTING.md) before making a pull request.
+
+## 📝 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
